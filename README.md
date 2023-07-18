@@ -47,3 +47,6 @@ For function1, we can define training rows consisting of:
 Then repeat this for function2 (x36) and function3 (x36).
 Then shuffle the rows.
 Then extract the last 20 rows as a test set.
+
+train-function-calling rows = 36x3 - 20 = 88
+test-function-calling rows = 20
