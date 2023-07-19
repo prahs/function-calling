@@ -131,7 +131,7 @@ assistantResponse = {
     "role": "function_call",
     "name": "get_current_weather",
     "arguments": {
-        "location": "lagos, Nigeria"
+        "location": "lagos, Nigeria",
         "unit": "celsius"
     }
 }
@@ -144,7 +144,7 @@ assistantResponse = {
     "role": "function_call",
     "name": "get_current_weather",
     "arguments": {
-        "location": "Berlin, Germany"
+        "location": "Berlin, Germany",
         "unit": "celsius"
     }
 }
@@ -157,7 +157,7 @@ assistantResponse = {
     "role": "function_call",
     "name": "get_current_weather",
     "arguments": {
-        "location": "Boston, Massachusetts"
+        "location": "Boston, Massachusetts",
         "unit": "fahrenheit"
     }
 }
