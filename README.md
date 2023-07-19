@@ -81,11 +81,13 @@ Instructions on use of functions (instructions):
 "
 
 ## userPrompt and assistantResponse Training Set
-A. Three function-requiring prompts for each function, each followed by a function invocation. (3 x 3 = 9 prompts).
+### A. Three function-requiring prompts for each function, each followed by a function invocation. One non-function requiring prompts. (3 x 2 x 3 = 18 prompts).
 
 1. search_bing
 
-userPrompt = Search the internet for Irish stew recipes
+i.
+
+userPrompt = Search the internet for Irish stew recipes.
 
 assistantResponse = {
     "role": "function_call",
@@ -95,7 +97,9 @@ assistantResponse = {
     }
 }
 
-userPrompt = Search bing for instructions to fly a kite
+ii.
+
+userPrompt = Search bing for instructions to fly a kite.
 
 assistantResponse = {
     "role": "function_call",
@@ -105,7 +109,9 @@ assistantResponse = {
     }
 }
 
-userPrompt = Find restaurant recommendations for Dublin on the web
+iii.
+
+userPrompt = Find restaurant recommendations for Dublin on the web.
 
 assistantResponse = {
     "role": "function_call",
@@ -117,17 +123,74 @@ assistantResponse = {
 
 2. get_current_weather
 
-userPrompt = 
+i.
 
-assistantResponse =
+userPrompt = What's the weather in Lagos now? My friend is over there right now.
 
-2. search_arxiv
+assistantResponse = {
+    "role": "function_call",
+    "name": "get_current_weather",
+    "arguments": {
+        "location": "lagos, Nigeria"
+        "unit": "celsius"
+    }
+}
 
-userPrompt = 
+ii.
 
-assistantResponse = 
+userPrompt = How hot is it in Berlin? I'm wondering if I'll go out for a cycle.
 
-B. Nine prompts not requiring the use of defined functions. Each followed by non-function responses. (9 prompts).
+assistantResponse = {
+    "role": "function_call",
+    "name": "get_current_weather",
+    "arguments": {
+        "location": "Berlin, Germany"
+        "unit": "celsius"
+    }
+}
+
+iii.
+
+userPrompt = I'm going on holidays later today. How's the weather in Boston?
+
+assistantResponse = {
+    "role": "function_call",
+    "name": "get_current_weather",
+    "arguments": {
+        "location": "Boston, Massachusetts"
+        "unit": "fahrenheit"
+    }
+}
+
+3. search_arxiv
+
+userPrompt = ...
+
+assistantResponse = ...
+
+### B. Nine prompts not requiring the use of defined functions. Each followed by non-function responses. (9 prompts).
+
+i.
+
+userPrompt = Search google for paintings by Michelangelo
+
+assistantResponse = There are no functions allowing me to search google, but I can search the internet using Bing if you ask.
+
+ii.
+
+userPrompt = What is the name of the largest breed of dog?
+
+assistantResponse = The Great Dane is typically seen to be the largest dog breed, in terms of height. Although they aren't heaviest breed, they can be up to 30 inches tall in height.
+
+iii.
+
+userPrompt = What is the weather forecast for two weeks from now?
+
+assistantResponse = There is not function to get the weather forecast two weeks from now, but I can help you with the weather today if you provide a location.
+
+iv.
+
+...
 
 ## systemPrompt and user/assistantResponse Training Set Combinations
 
