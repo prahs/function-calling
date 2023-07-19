@@ -74,7 +74,7 @@ Instructions on use of functions (instructions):
     "role": "function_call",
     "name": "function_name",
     "arguments": {
-        "argument_name_1": "argument_value_2",
+        "argument_name_1": "argument_value_1",
         "argument_name_2": "argument_value_2"
     }
 }
