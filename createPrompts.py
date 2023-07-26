@@ -69,7 +69,7 @@ with open('prompts.csv', 'w', newline='') as csvfile:
     random.shuffle(rows)
 
     # Calculate the number of test samples
-    num_test_samples = math.ceil(len(rows) * 0.1)
+    num_test_samples = math.ceil(len(rows) * 0.2)
 
     # Split the rows into train and test
     test_rows = rows[:num_test_samples]
