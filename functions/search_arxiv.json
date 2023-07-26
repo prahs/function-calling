@@ -1,0 +1,39 @@
+{
+    "functionMetaData": {
+        "function": "search_arxiv",
+        "description": "Search for research papers on ArXiv. Make use of AND, OR and NOT operators as appropriate to join terms within the query.",
+        "arguments": [
+            {
+                "name": "query",
+                "type": "string",
+                "description": "The search query string"
+            }
+        ]
+    },
+    "samplePromptResponsePairs": [
+        {
+            "prompt": "Find papers on high pressure batch reverse osmosis",
+            "response": {
+                "arguments": {
+                    "query": "high pressure batch reverse osmosis"
+                }
+            }
+        },
+        {
+            "prompt": "Search for academic papers on transformers with long context length",
+            "response": {
+                "arguments": {
+                    "query": "long context length transformers"
+                }
+            }
+        },
+        {
+            "prompt": "Find research papers on geothermal heat pumps",
+            "response": {
+                "arguments": {
+                    "query": "geothermal heat pumps"
+                }
+            }
+        }
+    ]
+}

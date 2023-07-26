@@ -1,0 +1,39 @@
+{
+    "functionMetaData": {
+        "function": "search_bing",
+        "description": "Search the web for content on Bing. This allows users to search online/the internet/the web for content.",
+        "arguments": [
+            {
+                "name": "query",
+                "type": "string",
+                "description": "The search query string"
+            }
+        ]
+    },
+    "samplePromptResponsePairs": [
+        {
+            "prompt": "Search the internet for Irish stew recipes.",
+            "response": {
+                "arguments": {
+                    "query": "irish stew recipes"
+                }
+            }
+        },
+        {
+            "prompt": "Search bing for instructions to fly a kite.",
+            "response": {
+                "arguments": {
+                    "query": "instructions to fly a kite"
+                }
+            }
+        },
+        {
+            "prompt": "Find restaurant recommendations for Dublin on the web.",
+            "response": {
+                "arguments": {
+                    "query": "Dublin restaurant recommendations"
+                }
+            }
+        }
+    ]
+}

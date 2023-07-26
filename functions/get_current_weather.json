@@ -1,0 +1,42 @@
+{
+    "functionMetaData": {
+        "function": "get_current_weather",
+        "description": "Get the current weather in a given location",
+        "arguments": [
+            {
+                "name": "unit",
+                "type": "string",
+                "description": "Measurement unit for the weather. Options: 'celsius', 'fahrenheit'"
+            }
+        ]
+    },
+    "samplePromptResponsePairs": [
+        {
+            "prompt": "What's the weather in Lagos now? My friend is over there right now.",
+            "response": {
+                "arguments": {
+                    "location": "Lagos, Nigeria",
+                    "unit": "celsius"
+                }
+            }
+        },
+        {
+            "prompt": "How hot is it in Berlin? I'm wondering if I'll go out for a cycle.",
+            "response": {
+                "arguments": {
+                    "location": "Berlin, Germany",
+                    "unit": "celsius"
+                }
+            }
+        },
+        {
+            "prompt": "I'm going on holidays later today. How's the weather in Boston?",
+            "response": {
+                "arguments": {
+                    "location": "Boston, USA",
+                    "unit": "fahrenheit"
+                }
+            }
+        }
+    ]
+}

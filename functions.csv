@@ -1,0 +1,4 @@
+Function Name,Description,Arguments
+get_current_weather,Retrieves the current weather in a given location,"[{""name"": ""location"", ""type"": ""string"", ""description"": ""City and state. For example: San Francisco, CA""}, {""name"": ""unit"", ""type"": ""string"", ""description"": ""Measurement unit for the weather. Options: celsius, fahrenheit""}]"
+search_bing,Search the web for content on Bing. This allows users to search online/the internet/the web for content.,"[{""name"": ""query"", ""type"": ""string"", ""description"": ""The search query string""}]"
+search_arxiv,"Search for research papers on ArXiv. Make use of AND, OR and NOT operators as appropriate to join terms within the query.","[{""name"": ""query"", ""type"": ""string"", ""description"": ""The search query string""}]"
