@@ -9,9 +9,11 @@ size_categories:
 - n<1K
 license: apache-2.0
 ---
-# README
+# Function Calling
 
-This repository contains a Python script to generate a training and testing dataset for OpenAI's ChatGPT from a collection of functions and their sample prompts and responses.
+System, user and assistant prompts for training language models to support function calling.
+
+You can submit new functions by creating a new branch and requesting to merge a pull request. All contributions must allow for the Apache 2 license to be used (you cannot use ChatGPT or Llama or any other restricted model to generate the prompts). Make sure to run validate.py on your function.json to ensure it is properly structured.
 
 ## File Structure
 
@@ -64,37 +66,6 @@ The generated CSV file has the following columns:
 - `systemPrompt`: The system's prompt, which includes the descriptions of two functions (the current function and a randomly selected other function) and instructions on how to call a function.
 - `userPrompt`: The user's prompt.
 - `assistantResponse`: The assistant's response.
-
-## Formatting the Training and Test Sets
-
-For training the assistant model, a specific prompt format is required. The Python script `prepare_dataset.py` is provided to format the training and test sets.
-
-This script embeds each part of the dialogue (system prompt, user prompt, and assistant response) within specific markers that indicate their role in the conversation. For example, the system prompt is embedded within `<<SYS>>` and `<</SYS>>` markers, while the user prompt is embedded within `[INST]` and `[/INST]` markers.
-
-The `prepare_dataset` function within this script applies this formatting to each dialogue in the training or test set, creating a new set with the formatted dialogues.
-
-The function is called as follows:
-
-```python
-def prepare_dataset(dataset, tokenizer):
-    # Define the roles and markers
-    B_SYS, E_SYS = "<<SYS>>", "<</SYS>>"
-    B_INST, E_INST = "[INST]", "[/INST]"
-
-    # Create the formatted text with the correct roles for each part of the dialogue
-    formatted_dataset = dataset.map(
-        lambda x: {
-            "input_text": "".join([
-                f"{B_INST} {B_SYS}{x['systemPrompt'].strip()}{E_SYS} \n",
-                f"{x['userPrompt'].strip()} {E_INST} \n",
-                f"{x['assistantResponse'].strip()}",  # appending the EOS token in TextData...
-            ]),
-            "response_text": "".join([
-                f"{x['assistantResponse'].strip()}",  # appending the EOS token in TextData...
-            ]),
-        }
-    )
-```
 
 ## Testing JSON Structure
 
