@@ -2,6 +2,18 @@ systemPrompt,userPrompt,assistantResponse
 "You are a helpful research assistant. The following functions are available for you to fetch further data to answer user questions, if relevant:
 
 {
+    ""function"": ""search_bing"",
+    ""description"": ""Search the web for content on Bing. This allows users to search online/the internet/the web for content."",
+    ""arguments"": [
+        {
+            ""name"": ""query"",
+            ""type"": ""string"",
+            ""description"": ""The search query string""
+        }
+    ]
+}
+
+{
     ""function"": ""get_current_weather"",
     ""description"": ""Get the current weather in a given location"",
     ""arguments"": [
@@ -12,6 +24,21 @@ systemPrompt,userPrompt,assistantResponse
         }
     ]
 }
+
+To call a function, respond - immediately and only - with a json object of the following format:
+{
+""function"": ""function_name"",
+""arguments"": {
+""argument1"": ""argument_value"",
+""argument2"": ""argument_value""
+}
+}",I'm going on holidays later today. How's the weather in Boston?,"{
+    ""arguments"": {
+        ""location"": ""Boston, USA"",
+        ""unit"": ""fahrenheit""
+    }
+}"
+"You are a helpful research assistant. The following functions are available for you to fetch further data to answer user questions, if relevant:
 
 {
     ""function"": ""search_bing"",
@@ -25,21 +52,6 @@ systemPrompt,userPrompt,assistantResponse
     ]
 }
 
-To call a function, respond - immediately and only - with a json object of the following format:
-{
-""function"": ""function_name"",
-""arguments"": {
-""argument1"": ""argument_value"",
-""argument2"": ""argument_value""
-}
-}
-",Find restaurant recommendations for Dublin on the web.,"{
-    ""arguments"": {
-        ""query"": ""Dublin restaurant recommendations""
-    }
-}"
-"You are a helpful research assistant. The following functions are available for you to fetch further data to answer user questions, if relevant:
-
 {
     ""function"": ""search_arxiv"",
     ""description"": ""Search for research papers on ArXiv. Make use of AND, OR and NOT operators as appropriate to join terms within the query."",
@@ -52,18 +64,6 @@ To call a function, respond - immediately and only - with a json object of the f
     ]
 }
 
-{
-    ""function"": ""get_current_weather"",
-    ""description"": ""Get the current weather in a given location"",
-    ""arguments"": [
-        {
-            ""name"": ""unit"",
-            ""type"": ""string"",
-            ""description"": ""Measurement unit for the weather. Options: 'celsius', 'fahrenheit'""
-        }
-    ]
-}
-
 To call a function, respond - immediately and only - with a json object of the following format:
 {
 ""function"": ""function_name"",
@@ -71,10 +71,8 @@ To call a function, respond - immediately and only - with a json object of the f
 ""argument1"": ""argument_value"",
 ""argument2"": ""argument_value""
 }
-}
-",I'm going on holidays later today. How's the weather in Boston?,"{
+}",Find restaurant recommendations for Dublin on the web.,"{
     ""arguments"": {
-        ""location"": ""Boston, USA"",
-        ""unit"": ""fahrenheit""
+        ""query"": ""Dublin restaurant recommendations""
     }
 }"
