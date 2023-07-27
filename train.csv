@@ -2,88 +2,6 @@ systemPrompt,userPrompt,assistantResponse
 "You are a helpful research assistant. The following functions are available for you to fetch further data to answer user questions, if relevant:
 
 {
-    ""function"": ""get_current_weather"",
-    ""description"": ""Get the current weather in a given location"",
-    ""arguments"": [
-        {
-            ""name"": ""unit"",
-            ""type"": ""string"",
-            ""description"": ""Measurement unit for the weather. Options: 'celsius', 'fahrenheit'""
-        }
-    ]
-}
-
-{
-    ""function"": ""search_bing"",
-    ""description"": ""Search the web for content on Bing. This allows users to search online/the internet/the web for content."",
-    ""arguments"": [
-        {
-            ""name"": ""query"",
-            ""type"": ""string"",
-            ""description"": ""The search query string""
-        }
-    ]
-}
-
-To call a function, respond - immediately and only - with a json object of the following format:
-{
-""function"": ""function_name"",
-""arguments"": {
-""argument1"": ""argument_value"",
-""argument2"": ""argument_value""
-}
-}",Search bing for instructions to fly a kite.,"{
-    ""function"": ""search_bing"",
-    ""arguments"": {
-        ""arguments"": {
-            ""query"": ""instructions to fly a kite""
-        }
-    }
-}"
-"You are a helpful research assistant. The following functions are available for you to fetch further data to answer user questions, if relevant:
-
-{
-    ""function"": ""search_bing"",
-    ""description"": ""Search the web for content on Bing. This allows users to search online/the internet/the web for content."",
-    ""arguments"": [
-        {
-            ""name"": ""query"",
-            ""type"": ""string"",
-            ""description"": ""The search query string""
-        }
-    ]
-}
-
-{
-    ""function"": ""get_current_weather"",
-    ""description"": ""Get the current weather in a given location"",
-    ""arguments"": [
-        {
-            ""name"": ""unit"",
-            ""type"": ""string"",
-            ""description"": ""Measurement unit for the weather. Options: 'celsius', 'fahrenheit'""
-        }
-    ]
-}
-
-To call a function, respond - immediately and only - with a json object of the following format:
-{
-""function"": ""function_name"",
-""arguments"": {
-""argument1"": ""argument_value"",
-""argument2"": ""argument_value""
-}
-}",Find restaurant recommendations for Dublin on the web.,"{
-    ""function"": ""search_bing"",
-    ""arguments"": {
-        ""arguments"": {
-            ""query"": ""Dublin restaurant recommendations""
-        }
-    }
-}"
-"You are a helpful research assistant. The following functions are available for you to fetch further data to answer user questions, if relevant:
-
-{
     ""function"": ""search_arxiv"",
     ""description"": ""Search for research papers on ArXiv. Make use of AND, OR and NOT operators as appropriate to join terms within the query."",
     ""arguments"": [
@@ -96,71 +14,31 @@ To call a function, respond - immediately and only - with a json object of the f
 }
 
 {
-    ""function"": ""get_current_weather"",
-    ""description"": ""Get the current weather in a given location"",
+    ""function"": ""search_bing"",
+    ""description"": ""Search the web for content on Bing. This allows users to search online/the internet/the web for content."",
     ""arguments"": [
         {
-            ""name"": ""unit"",
+            ""name"": ""query"",
             ""type"": ""string"",
-            ""description"": ""Measurement unit for the weather. Options: 'celsius', 'fahrenheit'""
+            ""description"": ""The search query string""
         }
     ]
 }
+                
 
-To call a function, respond - immediately and only - with a json object of the following format:
-{
-""function"": ""function_name"",
-""arguments"": {
-""argument1"": ""argument_value"",
-""argument2"": ""argument_value""
-}
-}",Find research papers on geothermal heat pumps,"{
+To call a function, respond - immediately and only - with a JSON object of the following format:
+                {
+                    ""function"": ""function_name"",
+                    ""arguments"": {
+                        ""argument1"": ""argument_value"",
+                        ""argument2"": ""argument_value""
+                    }
+                }
+                ",Search for academic papers on transformers with long context length,"{
     ""function"": ""search_arxiv"",
     ""arguments"": {
         ""arguments"": {
-            ""query"": ""geothermal heat pumps""
-        }
-    }
-}"
-"You are a helpful research assistant. The following functions are available for you to fetch further data to answer user questions, if relevant:
-
-{
-    ""function"": ""get_current_weather"",
-    ""description"": ""Get the current weather in a given location"",
-    ""arguments"": [
-        {
-            ""name"": ""unit"",
-            ""type"": ""string"",
-            ""description"": ""Measurement unit for the weather. Options: 'celsius', 'fahrenheit'""
-        }
-    ]
-}
-
-{
-    ""function"": ""search_bing"",
-    ""description"": ""Search the web for content on Bing. This allows users to search online/the internet/the web for content."",
-    ""arguments"": [
-        {
-            ""name"": ""query"",
-            ""type"": ""string"",
-            ""description"": ""The search query string""
-        }
-    ]
-}
-
-To call a function, respond - immediately and only - with a json object of the following format:
-{
-""function"": ""function_name"",
-""arguments"": {
-""argument1"": ""argument_value"",
-""argument2"": ""argument_value""
-}
-}",I'm going on holidays later today. How's the weather in Boston?,"{
-    ""function"": ""get_current_weather"",
-    ""arguments"": {
-        ""arguments"": {
-            ""location"": ""Boston, USA"",
-            ""unit"": ""fahrenheit""
+            ""query"": ""long context length transformers""
         }
     }
 }"
@@ -189,15 +67,17 @@ To call a function, respond - immediately and only - with a json object of the f
         }
     ]
 }
+                
 
-To call a function, respond - immediately and only - with a json object of the following format:
-{
-""function"": ""function_name"",
-""arguments"": {
-""argument1"": ""argument_value"",
-""argument2"": ""argument_value""
-}
-}",How hot is it in Berlin? I'm wondering if I'll go out for a cycle.,"{
+To call a function, respond - immediately and only - with a JSON object of the following format:
+                {
+                    ""function"": ""function_name"",
+                    ""arguments"": {
+                        ""argument1"": ""argument_value"",
+                        ""argument2"": ""argument_value""
+                    }
+                }
+                ",How hot is it in Berlin? I'm wondering if I'll go out for a cycle.,"{
     ""function"": ""get_current_weather"",
     ""arguments"": {
         ""arguments"": {
@@ -231,15 +111,147 @@ To call a function, respond - immediately and only - with a json object of the f
         }
     ]
 }
+                
 
-To call a function, respond - immediately and only - with a json object of the following format:
+To call a function, respond - immediately and only - with a JSON object of the following format:
+                {
+                    ""function"": ""function_name"",
+                    ""arguments"": {
+                        ""argument1"": ""argument_value"",
+                        ""argument2"": ""argument_value""
+                    }
+                }
+                ",Search bing for instructions to fly a kite.,"{
+    ""function"": ""search_bing"",
+    ""arguments"": {
+        ""arguments"": {
+            ""query"": ""instructions to fly a kite""
+        }
+    }
+}"
+"You are a helpful research assistant. The following functions are available for you to fetch further data to answer user questions, if relevant:
+
 {
-""function"": ""function_name"",
-""arguments"": {
-""argument1"": ""argument_value"",
-""argument2"": ""argument_value""
+    ""function"": ""search_bing"",
+    ""description"": ""Search the web for content on Bing. This allows users to search online/the internet/the web for content."",
+    ""arguments"": [
+        {
+            ""name"": ""query"",
+            ""type"": ""string"",
+            ""description"": ""The search query string""
+        }
+    ]
 }
-}",Search the internet for Irish stew recipes.,"{
+
+{
+    ""function"": ""search_arxiv"",
+    ""description"": ""Search for research papers on ArXiv. Make use of AND, OR and NOT operators as appropriate to join terms within the query."",
+    ""arguments"": [
+        {
+            ""name"": ""query"",
+            ""type"": ""string"",
+            ""description"": ""The search query string""
+        }
+    ]
+}
+                
+
+To call a function, respond - immediately and only - with a JSON object of the following format:
+                {
+                    ""function"": ""function_name"",
+                    ""arguments"": {
+                        ""argument1"": ""argument_value"",
+                        ""argument2"": ""argument_value""
+                    }
+                }
+                ",Find papers on high pressure batch reverse osmosis,"{
+    ""function"": ""search_arxiv"",
+    ""arguments"": {
+        ""arguments"": {
+            ""query"": ""high pressure batch reverse osmosis""
+        }
+    }
+}"
+"You are a helpful research assistant. The following functions are available for you to fetch further data to answer user questions, if relevant:
+
+{
+    ""function"": ""get_current_weather"",
+    ""description"": ""Get the current weather in a given location"",
+    ""arguments"": [
+        {
+            ""name"": ""unit"",
+            ""type"": ""string"",
+            ""description"": ""Measurement unit for the weather. Options: 'celsius', 'fahrenheit'""
+        }
+    ]
+}
+
+{
+    ""function"": ""search_bing"",
+    ""description"": ""Search the web for content on Bing. This allows users to search online/the internet/the web for content."",
+    ""arguments"": [
+        {
+            ""name"": ""query"",
+            ""type"": ""string"",
+            ""description"": ""The search query string""
+        }
+    ]
+}
+                
+
+To call a function, respond - immediately and only - with a JSON object of the following format:
+                {
+                    ""function"": ""function_name"",
+                    ""arguments"": {
+                        ""argument1"": ""argument_value"",
+                        ""argument2"": ""argument_value""
+                    }
+                }
+                ",I'm going on holidays later today. How's the weather in Boston?,"{
+    ""function"": ""get_current_weather"",
+    ""arguments"": {
+        ""arguments"": {
+            ""location"": ""Boston, USA"",
+            ""unit"": ""fahrenheit""
+        }
+    }
+}"
+"You are a helpful research assistant. The following functions are available for you to fetch further data to answer user questions, if relevant:
+
+{
+    ""function"": ""search_bing"",
+    ""description"": ""Search the web for content on Bing. This allows users to search online/the internet/the web for content."",
+    ""arguments"": [
+        {
+            ""name"": ""query"",
+            ""type"": ""string"",
+            ""description"": ""The search query string""
+        }
+    ]
+}
+
+{
+    ""function"": ""get_current_weather"",
+    ""description"": ""Get the current weather in a given location"",
+    ""arguments"": [
+        {
+            ""name"": ""unit"",
+            ""type"": ""string"",
+            ""description"": ""Measurement unit for the weather. Options: 'celsius', 'fahrenheit'""
+        }
+    ]
+}
+                
+
+To call a function, respond - immediately and only - with a JSON object of the following format:
+                {
+                    ""function"": ""function_name"",
+                    ""arguments"": {
+                        ""argument1"": ""argument_value"",
+                        ""argument2"": ""argument_value""
+                    }
+                }
+                ",Search the internet for Irish stew recipes.,"{
     ""function"": ""search_bing"",
     ""arguments"": {
         ""arguments"": {
@@ -272,15 +284,17 @@ To call a function, respond - immediately and only - with a json object of the f
         }
     ]
 }
+                
 
-To call a function, respond - immediately and only - with a json object of the following format:
-{
-""function"": ""function_name"",
-""arguments"": {
-""argument1"": ""argument_value"",
-""argument2"": ""argument_value""
-}
-}",What's the weather in Lagos now? My friend is over there right now.,"{
+To call a function, respond - immediately and only - with a JSON object of the following format:
+                {
+                    ""function"": ""function_name"",
+                    ""arguments"": {
+                        ""argument1"": ""argument_value"",
+                        ""argument2"": ""argument_value""
+                    }
+                }
+                ",What's the weather in Lagos now? My friend is over there right now.,"{
     ""function"": ""get_current_weather"",
     ""arguments"": {
         ""arguments"": {
