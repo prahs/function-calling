@@ -49,15 +49,12 @@ with open('prompts.csv', 'w', newline='') as csvfile:
                 system_prompt += json.dumps(function["functionMetaData"], indent=4, separators=(',', ': '))
 
             system_prompt += "\n\nTo call a function, respond - immediately and only - with a json object of the following format:\n{\n\"function\": \"function_name\",\n\"arguments\": {\n\"argument1\": \"argument_value\",\n\"argument2\": \"argument_value\"\n}\n}\n"
-            system_prompt += "\n\n"
 
             # Get the user prompt
             user_prompt = pair["prompt"]
-            user_prompt += "\n\n"
 
             # Get the assistant response
             assistant_response = json.dumps(pair["response"], indent=4, separators=(',', ': '))
-            assistant_response += "\n\n"
 
             # Add the row to the list
             rows.append([system_prompt, user_prompt, assistant_response])
