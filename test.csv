@@ -2,20 +2,20 @@ systemPrompt,userPrompt,assistantResponse
 "You are a helpful research assistant. The following functions are available for you to fetch further data to answer user questions, if relevant:
 
 {
-    ""function"": ""get_current_weather"",
-    ""description"": ""Get the current weather in a given location"",
+    ""function"": ""search_bing"",
+    ""description"": ""Search the web for content on Bing. This allows users to search online/the internet/the web for content."",
     ""arguments"": [
         {
-            ""name"": ""unit"",
+            ""name"": ""query"",
             ""type"": ""string"",
-            ""description"": ""Measurement unit for the weather. Options: 'celsius', 'fahrenheit'""
+            ""description"": ""The search query string""
         }
     ]
 }
 
 {
-    ""function"": ""search_bing"",
-    ""description"": ""Search the web for content on Bing. This allows users to search online/the internet/the web for content."",
+    ""function"": ""search_arxiv"",
+    ""description"": ""Search for research papers on ArXiv. Make use of AND, OR and NOT operators as appropriate to join terms within the query."",
     ""arguments"": [
         {
             ""name"": ""query"",
@@ -37,9 +37,7 @@ To call a function, respond - immediately and only - with a JSON object of the f
 ",Find restaurant recommendations for Dublin on the web.,"{
     ""function"": ""search_bing"",
     ""arguments"": {
-        ""arguments"": {
-            ""query"": ""Dublin restaurant recommendations""
-        }
+        ""query"": ""Dublin restaurant recommendations""
     }
 }"
 "You are a helpful research assistant. The following functions are available for you to fetch further data to answer user questions, if relevant:
@@ -77,11 +75,10 @@ To call a function, respond - immediately and only - with a JSON object of the f
         ""argument2"": ""argument_value""
     }
 }
-",Find papers on high pressure batch reverse osmosis,"{
-    ""function"": ""search_arxiv"",
+",How hot is it in Berlin? I'm wondering if I'll go out for a cycle.,"{
+    ""function"": ""get_current_weather"",
     ""arguments"": {
-        ""arguments"": {
-            ""query"": ""high pressure batch reverse osmosis""
-        }
+        ""location"": ""Berlin, Germany"",
+        ""unit"": ""celsius""
     }
 }"

@@ -62,13 +62,13 @@ with open('prompts.csv', 'w', newline='') as csvfile:
             user_prompt = pair["prompt"]
 
             # Get the assistant response
-            assistant_response = json.dumps(pair["response"], indent=4, separators=(',', ': '))
+            assistant_response = pair["response"]
 
             # Create a function call using the function name and the assistant response
             function_call = {
                 "function": function["functionMetaData"]["function"],
-                "arguments": json.loads(assistant_response)
             }
+            function_call.update(assistant_response)
 
             # Convert the function call to a JSON string
             assistant_response = json.dumps(function_call, indent=4, separators=(',', ': '))
