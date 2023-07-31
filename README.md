@@ -11,6 +11,8 @@ We also offer models trained with these datasets:
 - [fLlama-7B, 2GB shards](https://huggingface.co/Trelis/Llama-2-7b-chat-hf-function-calling)
 - [fLlama-13, 4GB shards](https://huggingface.co/Trelis/Llama-2-13b-chat-hf-function-calling) - RECOMMENDED. This is a stronger model and handles function calling more accurately.
 
+Both datasets were human generated (i.e. did not make use of Llama or OpenAI's GPT models etc.). This is important because Meta and OpenAI terms do not allow their language models to be used to train other models.
+
 ## Licensing
 
 ### Function Calling Dataset
