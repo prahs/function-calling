@@ -1,19 +1,44 @@
 ---
 task_categories:
 - question-answering
+- conversational
+- text-generation
 language:
 - en
 tags:
-- code
+- function call
+- function calling
+- function-calling
 size_categories:
 - n<1K
-license: apache-2.0
 ---
-# Function Calling
+# Trelis Function Calling Models
 
-System, user and assistant prompts for training language models to support function calling.
+We offer two models for training language models to support function calling:
+
+1. [Function Calling Model](https://huggingface.co/datasets/Trelis/function_calling)
+2. [Function Calling Extended Model](https://huggingface.co/datasets/Trelis/function_calling_extended)
+
+The extended dataset has 33 prompt-response pairs, compared to 11 for the open-source dataset.
+
+## Licensing
+
+### Function Calling Model
+
+The Function Calling model is licensed under Apache 2.
 
 You can submit new functions by creating a new branch and requesting to merge a pull request. All contributions must allow for the Apache 2 license to be used (you cannot use ChatGPT or Llama or any other restricted model to generate the prompts). Make sure to run validate.py on your function.json to ensure it is properly structured.
+
+### Function Calling Extended Model
+
+The Function Calling Extended model is commercially licensed. Users can purchase a license for €9.99 per device from [here](https://buy.stripe.com/00g4h2cWh5TJ9IQ28c). Users will receive access within 24 hours of their purchase. 
+
+Examples of license requirements:
+- Training on a CPU = 1 license required.
+- Training on a CPU + 1 GPU/TPU = 1 license required. (CPU is considered ancillary in this case)
+- Training a model on 2 GPUs = 2 licenses required.
+
+Licenses are transferable across different machines provided they are not running simultaneously. The license is solely for training language models. For other use cases, please reach out to us.
 
 ## File Structure
 
