@@ -18,6 +18,11 @@ systemPrompt,userPrompt,assistantResponse
     ""description"": ""Get the current weather in a given location"",
     ""arguments"": [
         {
+            ""name"": ""location"",
+            ""type"": ""string"",
+            ""description"": ""The city and country, e.g. Dublin, Ireland""
+        },
+        {
             ""name"": ""unit"",
             ""type"": ""string"",
             ""description"": ""Measurement unit for the weather. Options: 'celsius', 'fahrenheit'""
@@ -44,6 +49,23 @@ To call a function, respond - immediately and only - with a JSON object of the f
 "You are a helpful research assistant. The following functions are available for you to fetch further data to answer user questions, if relevant:
 
 {
+    ""function"": ""get_current_weather"",
+    ""description"": ""Get the current weather in a given location"",
+    ""arguments"": [
+        {
+            ""name"": ""location"",
+            ""type"": ""string"",
+            ""description"": ""The city and country, e.g. Dublin, Ireland""
+        },
+        {
+            ""name"": ""unit"",
+            ""type"": ""string"",
+            ""description"": ""Measurement unit for the weather. Options: 'celsius', 'fahrenheit'""
+        }
+    ]
+}
+
+{
     ""function"": ""search_arxiv"",
     ""description"": ""Search for research papers on ArXiv. Make use of AND, OR and NOT operators as appropriate to join terms within the query."",
     ""arguments"": [
@@ -51,18 +73,6 @@ To call a function, respond - immediately and only - with a JSON object of the f
             ""name"": ""query"",
             ""type"": ""string"",
             ""description"": ""The search query string""
-        }
-    ]
-}
-
-{
-    ""function"": ""get_current_weather"",
-    ""description"": ""Get the current weather in a given location"",
-    ""arguments"": [
-        {
-            ""name"": ""unit"",
-            ""type"": ""string"",
-            ""description"": ""Measurement unit for the weather. Options: 'celsius', 'fahrenheit'""
         }
     ]
 }
@@ -101,6 +111,11 @@ To call a function, respond - immediately and only - with a JSON object of the f
     ""function"": ""get_current_weather"",
     ""description"": ""Get the current weather in a given location"",
     ""arguments"": [
+        {
+            ""name"": ""location"",
+            ""type"": ""string"",
+            ""description"": ""The city and country, e.g. Dublin, Ireland""
+        },
         {
             ""name"": ""unit"",
             ""type"": ""string"",
@@ -169,8 +184,8 @@ To call a function, respond - immediately and only - with a JSON object of the f
 "You are a helpful research assistant. The following functions are available for you to fetch further data to answer user questions, if relevant:
 
 {
-    ""function"": ""search_arxiv"",
-    ""description"": ""Search for research papers on ArXiv. Make use of AND, OR and NOT operators as appropriate to join terms within the query."",
+    ""function"": ""search_bing"",
+    ""description"": ""Search the web for content on Bing. This allows users to search online/the internet/the web for content."",
     ""arguments"": [
         {
             ""name"": ""query"",
@@ -181,8 +196,8 @@ To call a function, respond - immediately and only - with a JSON object of the f
 }
 
 {
-    ""function"": ""search_bing"",
-    ""description"": ""Search the web for content on Bing. This allows users to search online/the internet/the web for content."",
+    ""function"": ""search_arxiv"",
+    ""description"": ""Search for research papers on ArXiv. Make use of AND, OR and NOT operators as appropriate to join terms within the query."",
     ""arguments"": [
         {
             ""name"": ""query"",
@@ -210,8 +225,8 @@ To call a function, respond - immediately and only - with a JSON object of the f
 "You are a helpful research assistant. The following functions are available for you to fetch further data to answer user questions, if relevant:
 
 {
-    ""function"": ""search_arxiv"",
-    ""description"": ""Search for research papers on ArXiv. Make use of AND, OR and NOT operators as appropriate to join terms within the query."",
+    ""function"": ""search_bing"",
+    ""description"": ""Search the web for content on Bing. This allows users to search online/the internet/the web for content."",
     ""arguments"": [
         {
             ""name"": ""query"",
@@ -222,8 +237,8 @@ To call a function, respond - immediately and only - with a JSON object of the f
 }
 
 {
-    ""function"": ""search_bing"",
-    ""description"": ""Search the web for content on Bing. This allows users to search online/the internet/the web for content."",
+    ""function"": ""search_arxiv"",
+    ""description"": ""Search for research papers on ArXiv. Make use of AND, OR and NOT operators as appropriate to join terms within the query."",
     ""arguments"": [
         {
             ""name"": ""query"",
@@ -251,20 +266,25 @@ To call a function, respond - immediately and only - with a JSON object of the f
 "You are a helpful research assistant. The following functions are available for you to fetch further data to answer user questions, if relevant:
 
 {
-    ""function"": ""search_bing"",
-    ""description"": ""Search the web for content on Bing. This allows users to search online/the internet/the web for content."",
+    ""function"": ""get_current_weather"",
+    ""description"": ""Get the current weather in a given location"",
     ""arguments"": [
         {
-            ""name"": ""query"",
+            ""name"": ""location"",
             ""type"": ""string"",
-            ""description"": ""The search query string""
+            ""description"": ""The city and country, e.g. Dublin, Ireland""
+        },
+        {
+            ""name"": ""unit"",
+            ""type"": ""string"",
+            ""description"": ""Measurement unit for the weather. Options: 'celsius', 'fahrenheit'""
         }
     ]
 }
 
 {
-    ""function"": ""search_arxiv"",
-    ""description"": ""Search for research papers on ArXiv. Make use of AND, OR and NOT operators as appropriate to join terms within the query."",
+    ""function"": ""search_bing"",
+    ""description"": ""Search the web for content on Bing. This allows users to search online/the internet/the web for content."",
     ""arguments"": [
         {
             ""name"": ""query"",
@@ -292,8 +312,8 @@ To call a function, respond - immediately and only - with a JSON object of the f
 "You are a helpful research assistant. The following functions are available for you to fetch further data to answer user questions, if relevant:
 
 {
-    ""function"": ""search_arxiv"",
-    ""description"": ""Search for research papers on ArXiv. Make use of AND, OR and NOT operators as appropriate to join terms within the query."",
+    ""function"": ""search_bing"",
+    ""description"": ""Search the web for content on Bing. This allows users to search online/the internet/the web for content."",
     ""arguments"": [
         {
             ""name"": ""query"",
@@ -304,13 +324,18 @@ To call a function, respond - immediately and only - with a JSON object of the f
 }
 
 {
-    ""function"": ""search_bing"",
-    ""description"": ""Search the web for content on Bing. This allows users to search online/the internet/the web for content."",
+    ""function"": ""get_current_weather"",
+    ""description"": ""Get the current weather in a given location"",
     ""arguments"": [
         {
-            ""name"": ""query"",
+            ""name"": ""location"",
             ""type"": ""string"",
-            ""description"": ""The search query string""
+            ""description"": ""The city and country, e.g. Dublin, Ireland""
+        },
+        {
+            ""name"": ""unit"",
+            ""type"": ""string"",
+            ""description"": ""Measurement unit for the weather. Options: 'celsius', 'fahrenheit'""
         }
     ]
 }
@@ -333,20 +358,25 @@ To call a function, respond - immediately and only - with a JSON object of the f
 "You are a helpful research assistant. The following functions are available for you to fetch further data to answer user questions, if relevant:
 
 {
-    ""function"": ""search_bing"",
-    ""description"": ""Search the web for content on Bing. This allows users to search online/the internet/the web for content."",
+    ""function"": ""get_current_weather"",
+    ""description"": ""Get the current weather in a given location"",
     ""arguments"": [
         {
-            ""name"": ""query"",
+            ""name"": ""location"",
             ""type"": ""string"",
-            ""description"": ""The search query string""
+            ""description"": ""The city and country, e.g. Dublin, Ireland""
+        },
+        {
+            ""name"": ""unit"",
+            ""type"": ""string"",
+            ""description"": ""Measurement unit for the weather. Options: 'celsius', 'fahrenheit'""
         }
     ]
 }
 
 {
-    ""function"": ""search_arxiv"",
-    ""description"": ""Search for research papers on ArXiv. Make use of AND, OR and NOT operators as appropriate to join terms within the query."",
+    ""function"": ""search_bing"",
+    ""description"": ""Search the web for content on Bing. This allows users to search online/the internet/the web for content."",
     ""arguments"": [
         {
             ""name"": ""query"",

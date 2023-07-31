@@ -4,6 +4,11 @@
         "description": "Get the current weather in a given location",
         "arguments": [
             {
+                "name": "location",
+                "type": "string",
+                "description": "The city and country, e.g. Dublin, Ireland"
+            },
+            {
                 "name": "unit",
                 "type": "string",
                 "description": "Measurement unit for the weather. Options: 'celsius', 'fahrenheit'"

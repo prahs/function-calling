@@ -34,17 +34,17 @@ To call a function, respond - immediately and only - with a JSON object of the f
         ""argument2"": ""argument_value""
     }
 }
-",Find papers on high pressure batch reverse osmosis,"{
+",Search for academic papers on transformers with long context length,"{
     ""function"": ""search_arxiv"",
     ""arguments"": {
-        ""query"": ""high pressure batch reverse osmosis""
+        ""query"": ""long context length transformers""
     }
 }"
 "You are a helpful research assistant. The following functions are available for you to fetch further data to answer user questions, if relevant:
 
 {
-    ""function"": ""search_arxiv"",
-    ""description"": ""Search for research papers on ArXiv. Make use of AND, OR and NOT operators as appropriate to join terms within the query."",
+    ""function"": ""search_bing"",
+    ""description"": ""Search the web for content on Bing. This allows users to search online/the internet/the web for content."",
     ""arguments"": [
         {
             ""name"": ""query"",
@@ -55,8 +55,8 @@ To call a function, respond - immediately and only - with a JSON object of the f
 }
 
 {
-    ""function"": ""search_bing"",
-    ""description"": ""Search the web for content on Bing. This allows users to search online/the internet/the web for content."",
+    ""function"": ""search_arxiv"",
+    ""description"": ""Search for research papers on ArXiv. Make use of AND, OR and NOT operators as appropriate to join terms within the query."",
     ""arguments"": [
         {
             ""name"": ""query"",
@@ -75,10 +75,10 @@ To call a function, respond - immediately and only - with a JSON object of the f
         ""argument2"": ""argument_value""
     }
 }
-",Search for academic papers on transformers with long context length,"{
+",Find research papers on geothermal heat pumps,"{
     ""function"": ""search_arxiv"",
     ""arguments"": {
-        ""query"": ""long context length transformers""
+        ""query"": ""geothermal heat pumps""
     }
 }"
 "You are a helpful research assistant. The following functions are available for you to fetch further data to answer user questions, if relevant:
@@ -100,6 +100,11 @@ To call a function, respond - immediately and only - with a JSON object of the f
     ""description"": ""Get the current weather in a given location"",
     ""arguments"": [
         {
+            ""name"": ""location"",
+            ""type"": ""string"",
+            ""description"": ""The city and country, e.g. Dublin, Ireland""
+        },
+        {
             ""name"": ""unit"",
             ""type"": ""string"",
             ""description"": ""Measurement unit for the weather. Options: 'celsius', 'fahrenheit'""
@@ -116,14 +121,31 @@ To call a function, respond - immediately and only - with a JSON object of the f
         ""argument2"": ""argument_value""
     }
 }
-",I'm going on holidays later today. How's the weather in Boston?,"{
+",What's the weather in Lagos now? My friend is over there right now.,"{
     ""function"": ""get_current_weather"",
     ""arguments"": {
-        ""location"": ""Boston, USA"",
-        ""unit"": ""fahrenheit""
+        ""location"": ""Lagos, Nigeria"",
+        ""unit"": ""celsius""
     }
 }"
 "You are a helpful research assistant. The following functions are available for you to fetch further data to answer user questions, if relevant:
+
+{
+    ""function"": ""get_current_weather"",
+    ""description"": ""Get the current weather in a given location"",
+    ""arguments"": [
+        {
+            ""name"": ""location"",
+            ""type"": ""string"",
+            ""description"": ""The city and country, e.g. Dublin, Ireland""
+        },
+        {
+            ""name"": ""unit"",
+            ""type"": ""string"",
+            ""description"": ""Measurement unit for the weather. Options: 'celsius', 'fahrenheit'""
+        }
+    ]
+}
 
 {
     ""function"": ""search_arxiv"",
@@ -136,6 +158,41 @@ To call a function, respond - immediately and only - with a JSON object of the f
         }
     ]
 }
+                
+
+To call a function, respond - immediately and only - with a JSON object of the following format:
+{
+    ""function"": ""function_name"",
+    ""arguments"": {
+        ""argument1"": ""argument_value"",
+        ""argument2"": ""argument_value""
+    }
+}
+",How hot is it in Berlin? I'm wondering if I'll go out for a cycle.,"{
+    ""function"": ""get_current_weather"",
+    ""arguments"": {
+        ""location"": ""Berlin, Germany"",
+        ""unit"": ""celsius""
+    }
+}"
+"You are a helpful research assistant. The following functions are available for you to fetch further data to answer user questions, if relevant:
+
+{
+    ""function"": ""get_current_weather"",
+    ""description"": ""Get the current weather in a given location"",
+    ""arguments"": [
+        {
+            ""name"": ""location"",
+            ""type"": ""string"",
+            ""description"": ""The city and country, e.g. Dublin, Ireland""
+        },
+        {
+            ""name"": ""unit"",
+            ""type"": ""string"",
+            ""description"": ""Measurement unit for the weather. Options: 'celsius', 'fahrenheit'""
+        }
+    ]
+}
 
 {
     ""function"": ""search_bing"",
@@ -145,6 +202,52 @@ To call a function, respond - immediately and only - with a JSON object of the f
             ""name"": ""query"",
             ""type"": ""string"",
             ""description"": ""The search query string""
+        }
+    ]
+}
+                
+
+To call a function, respond - immediately and only - with a JSON object of the following format:
+{
+    ""function"": ""function_name"",
+    ""arguments"": {
+        ""argument1"": ""argument_value"",
+        ""argument2"": ""argument_value""
+    }
+}
+",Find restaurant recommendations for Dublin on the web.,"{
+    ""function"": ""search_bing"",
+    ""arguments"": {
+        ""query"": ""Dublin restaurant recommendations""
+    }
+}"
+"You are a helpful research assistant. The following functions are available for you to fetch further data to answer user questions, if relevant:
+
+{
+    ""function"": ""search_bing"",
+    ""description"": ""Search the web for content on Bing. This allows users to search online/the internet/the web for content."",
+    ""arguments"": [
+        {
+            ""name"": ""query"",
+            ""type"": ""string"",
+            ""description"": ""The search query string""
+        }
+    ]
+}
+
+{
+    ""function"": ""get_current_weather"",
+    ""description"": ""Get the current weather in a given location"",
+    ""arguments"": [
+        {
+            ""name"": ""location"",
+            ""type"": ""string"",
+            ""description"": ""The city and country, e.g. Dublin, Ireland""
+        },
+        {
+            ""name"": ""unit"",
+            ""type"": ""string"",
+            ""description"": ""Measurement unit for the weather. Options: 'celsius', 'fahrenheit'""
         }
     ]
 }
@@ -179,91 +282,14 @@ To call a function, respond - immediately and only - with a JSON object of the f
 }
 
 {
-    ""function"": ""search_bing"",
-    ""description"": ""Search the web for content on Bing. This allows users to search online/the internet/the web for content."",
-    ""arguments"": [
-        {
-            ""name"": ""query"",
-            ""type"": ""string"",
-            ""description"": ""The search query string""
-        }
-    ]
-}
-                
-
-To call a function, respond - immediately and only - with a JSON object of the following format:
-{
-    ""function"": ""function_name"",
-    ""arguments"": {
-        ""argument1"": ""argument_value"",
-        ""argument2"": ""argument_value""
-    }
-}
-",Find research papers on geothermal heat pumps,"{
-    ""function"": ""search_arxiv"",
-    ""arguments"": {
-        ""query"": ""geothermal heat pumps""
-    }
-}"
-"You are a helpful research assistant. The following functions are available for you to fetch further data to answer user questions, if relevant:
-
-{
-    ""function"": ""search_bing"",
-    ""description"": ""Search the web for content on Bing. This allows users to search online/the internet/the web for content."",
-    ""arguments"": [
-        {
-            ""name"": ""query"",
-            ""type"": ""string"",
-            ""description"": ""The search query string""
-        }
-    ]
-}
-
-{
-    ""function"": ""search_arxiv"",
-    ""description"": ""Search for research papers on ArXiv. Make use of AND, OR and NOT operators as appropriate to join terms within the query."",
-    ""arguments"": [
-        {
-            ""name"": ""query"",
-            ""type"": ""string"",
-            ""description"": ""The search query string""
-        }
-    ]
-}
-                
-
-To call a function, respond - immediately and only - with a JSON object of the following format:
-{
-    ""function"": ""function_name"",
-    ""arguments"": {
-        ""argument1"": ""argument_value"",
-        ""argument2"": ""argument_value""
-    }
-}
-",Search the internet for Irish stew recipes.,"{
-    ""function"": ""search_bing"",
-    ""arguments"": {
-        ""query"": ""irish stew recipes""
-    }
-}"
-"You are a helpful research assistant. The following functions are available for you to fetch further data to answer user questions, if relevant:
-
-{
-    ""function"": ""search_arxiv"",
-    ""description"": ""Search for research papers on ArXiv. Make use of AND, OR and NOT operators as appropriate to join terms within the query."",
-    ""arguments"": [
-        {
-            ""name"": ""query"",
-            ""type"": ""string"",
-            ""description"": ""The search query string""
-        }
-    ]
-}
-
-{
     ""function"": ""get_current_weather"",
     ""description"": ""Get the current weather in a given location"",
     ""arguments"": [
+        {
+            ""name"": ""location"",
+            ""type"": ""string"",
+            ""description"": ""The city and country, e.g. Dublin, Ireland""
+        },
         {
             ""name"": ""unit"",
             ""type"": ""string"",
@@ -281,10 +307,10 @@ To call a function, respond - immediately and only - with a JSON object of the f
         ""argument2"": ""argument_value""
     }
 }
-",What's the weather in Lagos now? My friend is over there right now.,"{
+",I'm going on holidays later today. How's the weather in Boston?,"{
     ""function"": ""get_current_weather"",
     ""arguments"": {
-        ""location"": ""Lagos, Nigeria"",
-        ""unit"": ""celsius""
+        ""location"": ""Boston, USA"",
+        ""unit"": ""fahrenheit""
     }
 }"
