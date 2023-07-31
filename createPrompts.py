@@ -52,8 +52,8 @@ with open('prompts.csv', 'w', newline='') as csvfile:
                 \n\nTo call a function, respond - immediately and only - with a JSON object of the following format:\n{
     "function": "function_name",
     "arguments": {
-        "argument1": "argument_value",
-        "argument2": "argument_value"
+        "argument1": value1,
+        "argument2": value2
     }
 }
 """
