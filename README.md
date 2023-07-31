@@ -12,26 +12,26 @@ tags:
 size_categories:
 - n<1K
 ---
-# Trelis Function Calling Models
+# Trelis Function Calling Datasets
 
-We offer two models for training language models to support function calling:
+We offer two datasets for training language models to support function calling:
 
-1. [Function Calling Model](https://huggingface.co/datasets/Trelis/function_calling)
-2. [Function Calling Extended Model](https://huggingface.co/datasets/Trelis/function_calling_extended)
+1. [Function Calling Dataset](https://huggingface.co/datasets/Trelis/function_calling)
+2. [Function Calling Extended Dataset](https://huggingface.co/datasets/Trelis/function_calling_extended)
 
 The extended dataset has 33 prompt-response pairs, compared to 11 for the open-source dataset.
 
 ## Licensing
 
-### Function Calling Model
+### Function Calling Dataset
 
-The Function Calling model is licensed under Apache 2.
+The Function Calling dataset is licensed under Apache 2.
 
 You can submit new functions by creating a new branch and requesting to merge a pull request. All contributions must allow for the Apache 2 license to be used (you cannot use ChatGPT or Llama or any other restricted model to generate the prompts). Make sure to run validate.py on your function.json to ensure it is properly structured.
 
-### Function Calling Extended Model
+### Function Calling Extended Dataset
 
-The Function Calling Extended model is commercially licensed. Users can purchase a license for €9.99 per device from [here](https://buy.stripe.com/00g4h2cWh5TJ9IQ28c). Users will receive access within 24 hours of their purchase. 
+The Function Calling Extended dataset is commercially licensed. Users can purchase a license for €9.99 per device from [here](https://buy.stripe.com/00g4h2cWh5TJ9IQ28c). Users will receive access within 24 hours of their purchase. 
 
 Examples of license requirements:
 - Training on a CPU = 1 license required.
