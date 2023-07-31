@@ -21,6 +21,8 @@ We offer two datasets for training language models to support function calling:
 
 The extended dataset has 33 prompt-response pairs, compared to 11 for the open-source dataset.
 
+Both datasets were human generated (i.e. did not make use of Llama or OpenAI's GPT models etc.). This is important because Meta and OpenAI terms do not allow their language models to be used to train other models.
+
 ## Licensing
 
 ### Function Calling Dataset
