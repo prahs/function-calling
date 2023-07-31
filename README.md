@@ -1,17 +1,3 @@
----
-task_categories:
-- question-answering
-- conversational
-- text-generation
-language:
-- en
-tags:
-- function call
-- function calling
-- function-calling
-size_categories:
-- n<1K
----
 # Trelis Function Calling Datasets
 
 We offer two datasets for training language models to support function calling:
@@ -20,6 +6,10 @@ We offer two datasets for training language models to support function calling:
 2. [Function Calling Extended Dataset](https://huggingface.co/datasets/Trelis/function_calling_extended)
 
 The extended dataset has 33 prompt-response pairs, compared to 11 for the open-source dataset.
+
+We also offer models trained with these datasets:
+- [fLlama-7B, 2GB shards](https://huggingface.co/Trelis/Llama-2-7b-chat-hf-function-calling)
+- [fLlama-13, 4GB shards](https://huggingface.co/Trelis/Llama-2-13b-chat-hf-function-calling) - RECOMMENDED. This is a stronger model and handles function calling more accurately.
 
 ## Licensing
 
